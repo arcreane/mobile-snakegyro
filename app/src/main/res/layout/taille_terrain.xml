@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Options"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        tools:layout_editor_absoluteX="128dp"
+        tools:layout_editor_absoluteY="82dp" />
+
+    <TextView
+        android:id="@+id/texte_taille_terrain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Taille du terrain : "
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        tools:layout_editor_absoluteX="116dp"
+        tools:layout_editor_absoluteY="184dp" />
+
+    <SeekBar
+        android:id="@+id/seekBar2"
+        android:layout_width="188dp"
+        android:layout_height="57dp"
+        tools:layout_editor_absoluteX="109dp"
+        tools:layout_editor_absoluteY="242dp" />
+
+    <TextView
+        android:id="@+id/texte_nbr_objets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Nombre d'objets : "
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        tools:layout_editor_absoluteX="114dp"
+        tools:layout_editor_absoluteY="341dp" />
+
+    <SeekBar
+        android:id="@+id/seekBar3"
+        android:layout_width="187dp"
+        android:layout_height="55dp"
+        tools:layout_editor_absoluteX="112dp"
+        tools:layout_editor_absoluteY="401dp" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ok"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="641dp" />
+
+    <TextView
+        android:id="@+id/texte_obstacles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Obstacles :"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        tools:layout_editor_absoluteX="151dp"
+        tools:layout_editor_absoluteY="504dp" />
+
+    <SeekBar
+        android:id="@+id/seekBar4"
+        android:layout_width="181dp"
+        android:layout_height="51dp"
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="555dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/hedam/AndroidStudioProjects/Snake/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/Users/hedam/AndroidStudioProjects/Snake/app/src/main/res/layout/options.xml" value="0.8" />
+        <entry key="..\:/Users/hedam/AndroidStudioProjects/Snake/app/src/main/res/layout/options.xml" value="0.264" />
+        <entry key="..\:/Users/hedam/AndroidStudioProjects/Snake/app/src/main/res/layout/taille_terrain.xml" value="0.264" />
+        <entry key="..\:/Users/hedam/AndroidStudioProjects/Snake/app/src/main/res/layout/vitesse.xml" value="0.264" />
       </map>
     </option>
   </component>
