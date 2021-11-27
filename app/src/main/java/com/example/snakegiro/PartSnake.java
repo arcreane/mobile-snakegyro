@@ -2,12 +2,13 @@ package com.example.snakegiro;
 
 import android.graphics.Bitmap;
 import android.graphics.Rect;
-
+//class des parties du snake
 public class PartSnake {
     private Bitmap bm;
     private int x, y;
-    private Rect rBody, rTop, rBottom, rLeft, rRight;
+    private Rect rBody, rTop, rBottom, rLeft, rRight; //parties du corps, en haut, en bas, à gauche et à droite
 
+    //Axes sur la carte de jeu
     public PartSnake(Bitmap bm, int x, int y) {
         this.bm = bm;
         this.x = x;

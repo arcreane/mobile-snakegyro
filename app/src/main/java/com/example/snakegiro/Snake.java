@@ -4,7 +4,7 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 
 import java.util.ArrayList;
-
+//class du snake avec les parties du corp, les mouvements et les positions
 public class Snake {
     private boolean move_left, move_right, move_top, move_bottom;
     private Bitmap bm, bm_head_up, bm_head_down, bm_head_left, bm_head_right, bm_body_vertical, bm_body_horizontal,
@@ -13,6 +13,7 @@ public class Snake {
     private int x, y, length;
     private ArrayList<PartSnake> arrPartSnake = new ArrayList<>();
 
+    //création du snake sur la carte avec chaque parties du corps (en fonction de la carte)
     public Snake(Bitmap bm, int x, int y, int length) {
         this.bm = bm;
         this.x = x;
@@ -40,11 +41,13 @@ public class Snake {
         setMove_right(true);
     }
 
+    //mise à jour de la position
     public void update(){
         for (int i = length - 1; i > 0; i--){
             arrPartSnake.get(i).setX(arrPartSnake.get(i-1).getX());
             arrPartSnake.get(i).setY(arrPartSnake.get(i-1).getY());
         }
+        //initialisation des mouvements du snake
         if(move_right){
             arrPartSnake.get(0).setX(arrPartSnake.get(0).getX()+GameView.sizeOfMap);
             arrPartSnake.get(0).setBm(bm_head_right);

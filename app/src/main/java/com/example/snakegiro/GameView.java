@@ -27,6 +27,7 @@ public class GameView extends View {
     private Runnable runnable;
     public GameView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
+        //design du jeu
         bmTuile1 = BitmapFactory.decodeResource(this.getResources(), R.drawable.grass);
         bmTuile1 = Bitmap.createScaledBitmap(bmTuile1, sizeOfMap, sizeOfMap, true);
         bmTuile2 = BitmapFactory.decodeResource(this.getResources(), R.drawable.grass1);
@@ -52,12 +53,13 @@ public class GameView extends View {
             }
         };
 
+        //variable du gyro avec ajouts
         SensorEventListener gyroscopeEventListener = new SensorEventListener() {
             @Override
             public void onSensorChanged(SensorEvent event) {
                 if (move == false) {
                     move = true;
-                } else {
+                } else { //mouvements dans chaque sens en fonction de son orientation
                     if (event.values[2] > 0.5f && !snake.isMove_right()) {
                         snake.setMove_top(true);
                     } else if (event.values[2] > -0.5f && snake.isMove_right()) {
@@ -86,6 +88,7 @@ public class GameView extends View {
     };
 
 
+    //création de la carte
     @Override
     public void draw(Canvas canvas) {
         super.draw(canvas);
@@ -93,6 +96,7 @@ public class GameView extends View {
         for (int i = 0; i < arrTuile.size(); i++){
             canvas.drawBitmap(arrTuile.get(i).getBm(), arrTuile.get(i).getX(), arrTuile.get(i).getY(), null);
         }
+        //mise à jour carte et snake
         snake.update();
         snake.draw(canvas);
         handler.postDelayed(runnable, 2000);
