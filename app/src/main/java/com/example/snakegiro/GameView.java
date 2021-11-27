@@ -27,7 +27,7 @@ public class GameView extends View {
     private Runnable runnable;
     public GameView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        //design du jeu
+        //design du jeu (draw des images)
         bmTuile1 = BitmapFactory.decodeResource(this.getResources(), R.drawable.grass);
         bmTuile1 = Bitmap.createScaledBitmap(bmTuile1, sizeOfMap, sizeOfMap, true);
         bmTuile2 = BitmapFactory.decodeResource(this.getResources(), R.drawable.grass1);
@@ -35,6 +35,7 @@ public class GameView extends View {
         bmSnake = BitmapFactory.decodeResource(this.getResources(), R.drawable.snake1);
         bmSnake = Bitmap.createScaledBitmap(bmSnake, 14*sizeOfMap, sizeOfMap, true);
 
+        //renvoie des tuiles pour le snake
         for (int i = 0; i < h; i++){
             for (int j = 0; j < w; j++){
                 if((i+j)%2==0){
@@ -53,7 +54,7 @@ public class GameView extends View {
             }
         };
 
-        //variable du gyro avec ajouts
+        //variables du gyro avec ajouts
         SensorEventListener gyroscopeEventListener = new SensorEventListener() {
             @Override
             public void onSensorChanged(SensorEvent event) {

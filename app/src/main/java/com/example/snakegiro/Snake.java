@@ -13,7 +13,7 @@ public class Snake {
     private int x, y, length;
     private ArrayList<PartSnake> arrPartSnake = new ArrayList<>();
 
-    //création du snake sur la carte avec chaque parties du corps (en fonction de la carte)
+    //Snake avec chaque parties du corps et taille (en fonction de la carte)
     public Snake(Bitmap bm, int x, int y, int length) {
         this.bm = bm;
         this.x = x;
@@ -47,7 +47,7 @@ public class Snake {
             arrPartSnake.get(i).setX(arrPartSnake.get(i-1).getX());
             arrPartSnake.get(i).setY(arrPartSnake.get(i-1).getY());
         }
-        //initialisation des mouvements du snake
+        //initialisation des mouvements du snake sur carte
         if(move_right){
             arrPartSnake.get(0).setX(arrPartSnake.get(0).getX()+GameView.sizeOfMap);
             arrPartSnake.get(0).setBm(bm_head_right);
@@ -159,6 +159,7 @@ public class Snake {
         this.bm_body_vertical = bm_body_vertical;
     }
 
+    //positionnement horizontal, vertical, haut, gauche, droite et bas sur les axes x et y (snake)
     public Bitmap getBm_body_horizontal() {
         return bm_body_horizontal;
     }
@@ -263,6 +264,7 @@ public class Snake {
         this.arrPartSnake = arrPartSnake;
     }
 
+    //paramètres des mouvements (ex: faire un input pour aller à gauche renvoie au snake d'aller le snake vers la gauche)
     public boolean isMove_left() {
         return move_left;
     }
